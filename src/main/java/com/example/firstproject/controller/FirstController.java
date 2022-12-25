@@ -14,4 +14,10 @@ public class FirstController {
                                         //ㄴ 템플릿의 변수와 동일하게 해야함.
         return "greetings";
     }
+
+    @GetMapping("/bye")
+    public String seeYouNext(Model model){
+        model.addAttribute("nickname","walwal");
+        return "goodbye"; // return 값은 보여줄 view page
+    }
 }
