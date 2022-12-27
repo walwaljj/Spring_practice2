@@ -1,16 +1,20 @@
 package com.example.firstproject.DTO;
 
 import com.example.firstproject.entity.Article;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 
+@ToString//tostring 메서드와 같음.
+@AllArgsConstructor//생성자와 같은역할.
 public class ArticleForm {
 
     private String title;
     private String content;
 
-    public ArticleForm(String title, String content) {
-        this.title = title; //템플릿의 name과 이름 매칭시켜야 함.
-        this.content = content;
-    }
+//    public ArticleForm(String title, String content) {
+//        this.title = title; //템플릿의 name과 이름 매칭시켜야 함.
+//        this.content = content;
+//    }
 
 
 
@@ -21,11 +25,11 @@ public class ArticleForm {
                                                     // 이때 Article 생성자의 형태에 맞춰주고 , DTO -> Entity로 변환함.
     }
 
-    @Override
-    public String toString() {
-        return "ArticleForm{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "ArticleForm{" +
+//                "title='" + title + '\'' +
+//                ", content='" + content + '\'' +
+//                '}';
+//    }
 }
